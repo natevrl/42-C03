@@ -6,7 +6,7 @@
 /*   By: nbenhado <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/04 11:44:01 by nbenhado          #+#    #+#             */
-/*   Updated: 2021/07/04 15:45:57 by nbenhado         ###   ########.fr       */
+/*   Updated: 2021/07/04 19:34:33 by nbenhado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,23 @@ int ft_strncmp(char *s1, char *s2, unsigned int n)
 }
 
 
-int main()
+int	main(void)
 {
-	char s1[] = "ac";
-	char s2[] = "ab";
-	printf("%d\n", ft_strncmp(s1 , s2, 6));
-	printf("%d", strncmp(s1 , s2, 6));
+	char s1[] = "Test1";
+	char s2[] = "OK";
+	char s3[] = "Same";
+	char s4[] = "Size";
+	char s5[] = "Shorter";
+	char s6[] = "ThanMyself";
+	char s7[] = "ShorterTest";
+
+	printf("%d, %d\n", ft_strncmp(s1, s2, 4), strncmp(s1, s2, 4));
+	printf("%d, %d\n", ft_strncmp(s1, s2, 2), strncmp(s1, s2, 2));
+	printf("%d, %d\n", ft_strncmp(s3, s4, 4), strncmp(s3, s4, 4));
+	printf("%d, %d\n", ft_strncmp(s3, s4, 1), strncmp(s3, s4, 1));
+	printf("%d, %d\n", ft_strncmp(s5, s6, 3), strncmp(s5, s6, 3));
+	printf("%d, %d\n", ft_strncmp(s5, s5, 10), strncmp(s5, s5, 10));
+	printf("%d, %d\n", ft_strncmp(s5, s5, 5), strncmp(s5, s5, 5));
+	printf("%d, %d\n", ft_strncmp(s5, s7, 7), strncmp(s5, s7, 7));
+	printf("%d, %d\n", ft_strncmp(s5, s7, 8), strncmp(s5, s7, 8));
 }
