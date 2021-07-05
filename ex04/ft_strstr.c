@@ -6,7 +6,7 @@
 /*   By: nbenhado <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/04 17:24:26 by nbenhado          #+#    #+#             */
-/*   Updated: 2021/07/05 00:12:53 by nbenhado         ###   ########.fr       */
+/*   Updated: 2021/07/05 15:47:49 by nbenhado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
@@ -42,8 +42,12 @@ int	ft_strlen(char	*str)
 
 char *ft_strstr(char *str, char *to_find)
 {
-	int i = 0;
+	int	i;
+
+	i = 0;
 	int max = ft_strlen(to_find);
+	if (*to_find == '\0')
+		return str;
 	while (str[i] != '\0')
 	{
 		if (str[i] == to_find[0])
@@ -53,13 +57,13 @@ char *ft_strstr(char *str, char *to_find)
 				i++;
 				to_find++;
 				if (*to_find == '\0')
-					return  &str[i-max];
+					return  &str[i - max];
 			}
 		}
 			
 		i++;
 	}
-	return ;
+	return 0;
 }
 
 
@@ -70,10 +74,10 @@ int	main(void)
 	char s2a[] = "OK";
 	char s1b[] = "This is OK for now";
 	char s2b[] = "OK";
-	char s3a[] = "Same";
-	char s4a[] = "";
-	char s3b[] = "Same";
-	char s4b[] = "";
+	char s3a[] = "Same gg wp";
+	char s4a[] = " ";
+	char s3b[] = "Same gg wp";
+	char s4b[] = " ";
 	char s5a[] = "Shorter";
 	char s6a[] = "Than";
 	char s5b[] = "Shorter";
