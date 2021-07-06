@@ -6,7 +6,7 @@
 /*   By: nbenhado <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/04 16:40:55 by nbenhado          #+#    #+#             */
-/*   Updated: 2021/07/05 16:19:31 by nbenhado         ###   ########.fr       */
+/*   Updated: 2021/07/06 18:39:47 by nbenhado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strncat(char	*dest, char	*src, unsigned int	nb)
 
 	i = 0;
 	max = ft_strlen(dest);
-	while (i < nb)
+	while (i < nb && src[i] != '\0')
 	{
 		dest[max] = src[i];
 		max++;

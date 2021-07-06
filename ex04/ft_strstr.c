@@ -6,7 +6,7 @@
 /*   By: nbenhado <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/04 17:24:26 by nbenhado          #+#    #+#             */
-/*   Updated: 2021/07/05 16:12:27 by nbenhado         ###   ########.fr       */
+/*   Updated: 2021/07/06 18:22:17 by nbenhado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ char	*ft_strstr(char	*str, char	*to_find)
 
 	i = 0;
 	max = ft_strlen(to_find);
+	if (ft_strlen(to_find) > ft_strlen(str))
+		return (0);
 	if (*to_find == '\0')
 		return (str);
 	while (str[i] != '\0')
