@@ -6,7 +6,7 @@
 /*   By: nbenhado <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/04 17:24:26 by nbenhado          #+#    #+#             */
-/*   Updated: 2021/07/06 22:10:25 by nbenhado         ###   ########.fr       */
+/*   Updated: 2021/07/15 16:34:09 by nbenhado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,17 +49,4 @@ char	*ft_strstr(char	*str, char	*to_find)
 			i++;
 	}
 	return (0);
-}
-
-
-#include <string.h>
-#include <stdio.h>
-
-
-int	main(void)
-{
-	printf("\t\tEx04: \n");
-	
-	printf("Test de ft_strstr sur '', '' : %s\n", ft_strstr("awdawdabawdawdabcKK", "abc"));
-	printf("Test de strstr sur '', '' : %s\n", strstr("awdawdabawdawdabcKK", "abc"));
 }
